@@ -1,9 +1,40 @@
-[  {
+[
+  {
     "kernelSource": {
-      "name": "miku-KernelSU",
-      "repo": "https://github.com/PhamtomK12/kernel_xiaomi_odin",
-      "branch": "TDA",
-      "device": "odin"
+      "name": "Calamity-Spacewar",
+      "repo": "https://github.com/BruxinCore/CalamityKernel-spacewar.git",
+      "branch": "CALY-Base",
+      "device": "spacewar"
+    },
+    "withKernelSU": false,
+    "toolchains": [
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+        "branch": "master",
+        "name": "gas"
+      },
+      {
+        "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
+        "branch": "11",
+        "name": "clang"
+      }
+    ],
+    "params": {
+      "ARCH": "arm64",
+      "CROSS_COMPILE": "aarch64-linux-gnu-",
+      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
+      "CLANG_TRIPLE": "aarch64-linux-gnu-",
+      "AR": "",
+      "CC": "clang"
+    }
+  },
+  {
+    "kernelSource": {
+      "name": "Calamity-Spacewar-KSU",
+      "repo": "https://github.com/BruxinCore/CalamityKernel-spacewar.git",
+      "branch": "CALY-Base",
+      "device": "spacewar"
     },
     "withKernelSU": true,
     "toolchains": [
